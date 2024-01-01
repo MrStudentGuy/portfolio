@@ -1,6 +1,7 @@
 import { Public_Sans } from 'next/font/google'
 import Link from "next/link";
 import {toast} from "sonner";
+import Head from "next/head";
 
 const ps = Public_Sans({ subsets: ['latin'] })
 
@@ -59,50 +60,68 @@ const AddPersonalEmail = () => {
 
 export default function Home() {
     return (
-        <main
-            className={`${ps.className} flex flex-col justify-center items-center h-screen pattern-death-star-gray-900/100 `}>
-            <Link href={"/"} className={"flex flex-row justify-center items-center space-x-2 mb-10"}>
-                <LeftArrow/>
-                <p>Return to home</p>
-            </Link>
-            
-            <h1 className={"mt-10 mb-2 font-bold text-2xl"}>Email</h1>
-            <div className={"flex flex-col justify-evenly items-center space-y-5"}>
-                {/*School Email*/}
-                <button
-                    onClick={AddSchoolEmail}
-                    className={"cursor-pointer w-64 h-12 bg-gray-800 transition duration-75 hover:scale-110 hover:bg-gray-700 text-white py-2 px-4 rounded-lg flex flex-row justify-center items-center space-x-2"}>
-                    <EmailIcon/>
-                    <b>School Email</b>
-                </button>
+        <>
+            <Head>
+                <title>Contact | Aryan Pai</title>
+                <meta name="title" content="Contact | Aryan Pai" />
+                <meta name="theme-color" content="#000000" />
+                <meta name="description" content="Aryan Pai is a passionate hobbyist software developer, captain of FTC Team Matrix, and a student at the Dhirubhai Ambani International School." />
+                <meta property="og:image" content="https://mrstudentguy.vercel.app/AryanMemojiThumbsUp.png" />
+                <meta property="og:url" content="https://mrstudentguy.vercel.app/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Contact | Aryan Pai" />
                 
-                {/*Personal Email*/}
-                <button
-                    onClick={AddPersonalEmail}
-                    className={"cursor-pointer w-64 h-12 bg-gray-800 transition duration-75 hover:scale-110 hover:bg-gray-700 text-white py-2 px-4 rounded-lg flex flex-row justify-center items-center space-x-2"}>
-                    <EmailIcon/>
-                    <b>Personal Email</b>
-                </button>
-            </div>
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Contact | Aryan Pai" />
+                <meta name="twitter:description" content="Aryan Pai is a passionate hobbyist software developer, captain of FTC Team Matrix, and a student at the Dhirubhai Ambani International School." />
+                <meta name="twitter:image" content="https://mrstudentguy.vercel.app/AryanMemojiThumbsUp.png" />
+            </Head>
             
-            <h1 className={"mt-10 mb-2 font-bold text-2xl"}>Socials</h1>
-            <div className={"flex flex-col space-y-5"}>
-                <button
-                    className={"w-64 h-12 bg-gray-800 transition duration-75 hover:scale-110 hover:bg-gray-700 text-white py-2 px-4 rounded-lg flex flex-row justify-center items-center space-x-2"}>
-                    <GitHubIcon/>
-                    <Link href={"https://github.com/MrStudentGuy"} className={"cursor-pointer"} target={"_blank"}
-                          rel={"norefferer noopener"}><b>GitHub</b>/MrStudentGuy</Link>
-                </button>
+            <main
+                className={`${ps.className} flex flex-col justify-center items-center h-screen pattern-death-star-gray-900/100 `}>
+                <Link href={"/"} className={"flex flex-row justify-center items-center space-x-2 mb-10"}>
+                    <LeftArrow/>
+                    <p>Return to home</p>
+                </Link>
                 
-                <button
-                    className={"w-64 h-12 bg-gray-800 transition duration-75 hover:scale-110 hover:bg-gray-700 text-white py-2 px-4 rounded-lg flex flex-row justify-center items-center space-x-2"}>
-                    <LinkedInIcon/>
-                    <Link href={"https://www.linkedin.com/in/mrstudentguy/"} className={"cursor-pointer"}
-                          target={"_blank"}
-                          rel={"norefferer noopener"}><b>LinkedIn</b>/Aryan Pai</Link>
-                </button>
-            </div>
-        
-        </main>
+                <h1 className={"mt-10 mb-2 font-bold text-2xl"}>Email</h1>
+                <div className={"flex flex-col justify-evenly items-center space-y-5"}>
+                    {/*School Email*/}
+                    <button
+                        onClick={AddSchoolEmail}
+                        className={"cursor-pointer w-64 h-12 bg-gray-800 transition duration-75 hover:scale-110 hover:bg-gray-700 text-white py-2 px-4 rounded-lg flex flex-row justify-center items-center space-x-2"}>
+                        <EmailIcon/>
+                        <b>School Email</b>
+                    </button>
+                    
+                    {/*Personal Email*/}
+                    <button
+                        onClick={AddPersonalEmail}
+                        className={"cursor-pointer w-64 h-12 bg-gray-800 transition duration-75 hover:scale-110 hover:bg-gray-700 text-white py-2 px-4 rounded-lg flex flex-row justify-center items-center space-x-2"}>
+                        <EmailIcon/>
+                        <b>Personal Email</b>
+                    </button>
+                </div>
+                
+                <h1 className={"mt-10 mb-2 font-bold text-2xl"}>Socials</h1>
+                <div className={"flex flex-col space-y-5"}>
+                    <button
+                        className={"w-64 h-12 bg-gray-800 transition duration-75 hover:scale-110 hover:bg-gray-700 text-white py-2 px-4 rounded-lg flex flex-row justify-center items-center space-x-2"}>
+                        <GitHubIcon/>
+                        <Link href={"https://github.com/MrStudentGuy"} className={"cursor-pointer"} target={"_blank"}
+                              rel={"norefferer noopener"}><b>GitHub</b>/MrStudentGuy</Link>
+                    </button>
+                    
+                    <button
+                        className={"w-64 h-12 bg-gray-800 transition duration-75 hover:scale-110 hover:bg-gray-700 text-white py-2 px-4 rounded-lg flex flex-row justify-center items-center space-x-2"}>
+                        <LinkedInIcon/>
+                        <Link href={"https://www.linkedin.com/in/mrstudentguy/"} className={"cursor-pointer"}
+                              target={"_blank"}
+                              rel={"norefferer noopener"}><b>LinkedIn</b>/Aryan Pai</Link>
+                    </button>
+                </div>
+            
+            </main>
+        </>
     );
 }
