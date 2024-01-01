@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { Public_Sans } from 'next/font/google'
 import Link from "next/link";
+import Head from "next/head";
 
 const ps = Public_Sans({ subsets: ['latin'] })
 
@@ -22,49 +23,73 @@ const GitHubIcon = () => {
 
 export default function Home() {
     return (
-        <main
-            className={`${ps.className} flex flex-col justify-center items-center h-screen pattern-death-star-gray-900/100 `}>
-            <div className={"flex flex-col justify-center items-center space-y-5"}>
+        <>
+            <Head>
+                <title>Home | Aryan Pai</title>
+                <meta name="title" content="Home | Aryan Pai" />
+                <meta name="theme-color" content="#000000" />
+                <meta name="description" content="Aryan Pai is a passionate hobbyist software developer, captain of FTC Team Matrix, and a student at the Dhirubhai Ambani International School." />
+                <meta property="og:image" content="https://mrstudentguy.vercel.app/AryanMemojiThumbsUp.png" />
+                <meta property="og:url" content="https://mrstudentguy.vercel.app/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Home | Aryan Pai" />
                 
-                <Image src="/AryanMemojiThumbsUp.png" alt="Aryan Pai" width={250} height={250}
-                       className={"bg-white rounded-full shadow-2xl border-8 border-[#7143E5]"}/>
-                <h1 className={"font-bold text-3xl md:text-4xl"}>Aryan Pai</h1>
-                
-                <div className={"flex flex-row justify-center items-center space-x-1"}>
-                    <PinIcon/>
-                    <h2>Mumbai, India 🇮🇳</h2>
-                </div>
-                
-                <div className={"flex flex-col space-y-3"}>
-                    {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
-                    <div className={"font-mono text-green-400 bg-gray-800 p-2 rounded-lg"}>
-                        // <b>Captain</b> of <Link href={"https://www.ftcmatrix.com"} target={"_blank"}
-                                                   rel={"norefferer noopener"} className={"cursor-pointer"}><u>FTC Team
-                        Matrix</u></Link>
-                    </div>
-                    
-                    {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
-                    <div className={"font-mono text-green-400 bg-gray-800 p-2 rounded-lg"}>
-                        // <b>Developer</b> of our <Link href={"https://scorer.ftcmatrix.com/"}
-                                                         className={"cursor-pointer"} target={"_blank"}
-                                                         rel={"norefferer noopener"}><u>FTC Scorer</u></Link>
-                    </div>
-                    
-                    {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
-                    <div className={"font-mono text-green-400 bg-gray-800 p-2 rounded-lg"}>
-                        // Ardent <b>student</b> at <Link href={"https://dais.edu.in"} className={"cursor-pointer"}
-                                                          target={"_blank"}
-                                                          rel={"norefferer noopener"}><u>DAIS</u></Link>
-                    </div>
-                </div>
-            </div>
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Home | Aryan Pai" />
+                <meta name="twitter:description" content="Aryan Pai is a passionate hobbyist software developer, captain of FTC Team Matrix, and a student at the Dhirubhai Ambani International School." />
+                <meta name="twitter:image" content="https://mrstudentguy.vercel.app/AryanMemojiThumbsUp.png" />
+            </Head>
             
-            <button
-                className={"mt-10 bg-gray-800 hover:bg-gray-700 text-white py-2 px-4 rounded-lg flex flex-row justify-center items-center space-x-2"}>
-                <GitHubIcon/>
-                <Link href={"https://github.com/MrStudentGuy"} className={"cursor-pointer"} target={"_blank"}
-                      rel={"norefferer noopener"}><b>GitHub</b>/MrStudentGuy</Link>
-            </button>
-        </main>
+            <main
+                className={`${ps.className} flex flex-col justify-center items-center h-screen pattern-death-star-gray-900/100 `}>
+                <div className={"flex flex-col justify-center items-center space-y-5"}>
+                    
+                    <Image src="/AryanMemojiThumbsUp.png" alt="Aryan Pai" width={250} height={250}
+                           className={"bg-white pattern-crosses-gray-900/100 rounded-full shadow-2xl border-8 border-[#7143E5]"}/>
+                    <h1 className={"font-bold text-3xl md:text-4xl"}>Aryan Pai</h1>
+                    
+                    <div className={"flex flex-row justify-center items-center space-x-1"}>
+                        <PinIcon/>
+                        <h2>Mumbai, India 🇮🇳</h2>
+                    </div>
+                    
+                    <div className={"flex flex-col space-y-3"}>
+                        {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
+                        <div className={"transition duration-75 hover:scale-110 font-mono text-green-400 bg-gray-800 p-2 rounded-lg"}>
+                            // <b>Captain</b> of <Link href={"https://www.ftcmatrix.com"} target={"_blank"}
+                                                       rel={"norefferer noopener"} className={"cursor-pointer"}><u>FTC
+                            Team
+                            Matrix</u></Link>
+                        </div>
+                        
+                        {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
+                        <div className={"transition duration-75 hover:scale-110 font-mono text-green-400 bg-gray-800 p-2 rounded-lg"}>
+                            // Ardent <b>student</b> at <Link href={"https://dais.edu.in"} className={"cursor-pointer"}
+                                                              target={"_blank"}
+                                                              rel={"norefferer noopener"}><u>DAIS</u></Link>
+                        </div>
+                        
+                        {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
+                        <div className={"transition duration-75 hover:scale-110 font-mono text-green-400 bg-gray-800 p-2 rounded-lg"}>
+                            // Passionate <b>software developer</b>
+                        </div>
+                    </div>
+                </div>
+                
+                <button
+                    className={"mt-10 w-64 h-12 bg-gray-800 transition duration-75 hover:scale-110 hover:bg-gray-700 text-white py-2 px-4 rounded-lg flex flex-row justify-center items-center space-x-2"}>
+                    <GitHubIcon/>
+                    <Link href={"https://github.com/MrStudentGuy"} className={"cursor-pointer"} target={"_blank"}
+                          rel={"norefferer noopener"}><b>GitHub</b>/MrStudentGuy</Link>
+                </button>
+                
+                
+                <Link
+                    href={"/contact"}
+                    className={"mt-5 bg-gray-800 w-64 h-12 hover:bg-gray-700 text-white py-2 px-4 rounded-lg flex flex-row justify-center items-center space-x-2"}>
+                    <b>Contact</b>
+                </Link>
+            </main>
+        </>
     );
 }
